@@ -1,0 +1,31 @@
+</h1>  Music Recommendation System Project   </h1>
+In this music recommendation system project, we aim to create a personalized music recommendation engine using machine learning techniques. Let’s break down the steps involved:
+1.	Import Libraries:
+o	We start by importing essential Python libraries such as Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn. These libraries will help us handle data, perform analysis, and build our recommendation model.
+2.	Load the Data:
+o	We work with two datasets: 
+	Triplets File: Contains information about user-song interactions (e.g., which songs users listened to).
+	Song Data: Includes details about the songs (e.g., artist, genre, acoustic features).
+o	We load these datasets into data frames for further processing.
+3.	Data Cleaning:
+o	We clean the data by: 
+	Removing rows with missing values (e.g., null genre information).
+	Dropping unnecessary columns that won’t be used in our recommender system.
+4.	Data Consolidation:
+o	We combine the triplets and song data frames using a common column (Song ID).
+o	Duplicate Song IDs are removed to prevent inflated results after joining.
+5.	Model Preparation:
+o	To improve performance, we select only 50,000 records from the consolidated data frame.
+o	We create a new feature by combining the song title and artist name.
+o	We calculate the cumulative sum of listen counts for each song.
+6.	Popularity Recommendation Engine:
+o	We import a popularity-based recommender model.
+o	For User 5 and User 100, we display the top 10 popular songs.
+o	Note that popularity ratings are the same for all users.
+7.	Item Similarity Recommendation:
+o	We import an item similarity model.
+o	We analyze song history for User 5 and User 100.
+o	Based on their history, we recommend songs using item similarity.
+8.	Recommendation Based on Song Name:
+o	Given a selected song, we provide personalized recommendations.
+o	We can repeat this process for any other song
